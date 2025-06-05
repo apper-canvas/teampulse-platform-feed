@@ -1,8 +1,8 @@
-import React from 'react'
-      import ApperIcon from '@/components/ApperIcon' // Ensure this path is correct
+import * as Icons from 'lucide-react';
 
-      const Icon = ({ name, className = '' }) => {
-        return &lt;ApperIcon name={name} className={className} /&gt;
-      }
+const Icon = ({ name, className = '', ...props }) => {
+    const IconComponent = Icons[name] || Icons.HelpCircle;
+    return <IconComponent className={className} {...props} />;
+};
 
-      export default Icon
+export default Icon;
