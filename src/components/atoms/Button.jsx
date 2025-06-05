@@ -25,9 +25,9 @@ import React from 'react'
             className={combinedClassName}
             disabled={disabled}
             whileHover={whileHover}
-            whileTap={whileTap}
+whileTap={whileTap}
           >
-            {icon && &lt;Icon name={icon} className="w-4 h-4 mr-2" />}
+            {icon && <Icon name={icon} className="w-4 h-4 mr-2" />}
             {children}
           </MotionComponent>
         )
