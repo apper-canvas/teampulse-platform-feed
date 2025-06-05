@@ -234,74 +234,74 @@ import React, { useState, useEffect } from 'react'
           setShowEmployeeModal(true)
         }
 
-        const renderEmployeesTab = () => (
+const renderEmployeesTab = () => (
           <div className="space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0">
               <div>
-                &lt;Text variant="h1"&gt;Employee Management&lt;/Text&gt;
-                &lt;Text variant="body" className="mt-1"&gt;{filteredEmployees.length} employees found&lt;/Text&gt;
+                <Text variant="h1">Employee Management</Text>
+                <Text variant="body" className="mt-1">{filteredEmployees.length} employees found</Text>
               </div>
               
               <div className="flex items-center space-x-3">
                 <div className="flex items-center space-x-2 bg-white rounded-lg p-1 shadow-sm border border-surface-200">
-                  &lt;Button
+                  <Button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded ${viewMode === 'grid' ? 'bg-primary text-white' : 'text-surface-600 hover:bg-surface-100'}`}
                     icon="Grid3X3"
                     variant="iconOnly"
-                  /&gt;
-                  &lt;Button
+                  />
+                  <Button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded ${viewMode === 'list' ? 'bg-primary text-white' : 'text-surface-600 hover:bg-surface-100'}`}
                     icon="List"
                     variant="iconOnly"
-                  /&gt;
+                  />
                 </div>
                 
-                &lt;Button onClick={() => setShowEmployeeModal(true)} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} icon="UserPlus"&gt;
+                <Button onClick={() => setShowEmployeeModal(true)} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} icon="UserPlus">
                   <span className="hidden sm:inline">Add Employee</span>
-                &lt;/Button&gt;
+                </Button>
               </div>
             </div>
 
-            &lt;Card className="p-6"&gt;
+            <Card className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                &lt;SearchInput
+                <SearchInput
                   placeholder="Search employees..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                /&gt;
+                />
                 
-                &lt;FilterDropdown
+                <FilterDropdown
                   label="All Departments"
                   value={selectedFilters.department}
                   onChange={(e) => setSelectedFilters(prev => ({ ...prev, department: e.target.value }))}
                   options={departments}
-                /&gt;
+                />
                 
-                &lt;FilterDropdown
+                <FilterDropdown
                   label="All Locations"
                   value={selectedFilters.location}
                   onChange={(e) => setSelectedFilters(prev => ({ ...prev, location: e.target.value }))}
                   options={["New York", "San Francisco", "Chicago", "Remote"]}
-                /&gt;
+                />
                 
-                &lt;FilterDropdown
+                <FilterDropdown
                   label="All Status"
                   value={selectedFilters.status}
                   onChange={(e) => setSelectedFilters(prev => ({ ...prev, status: e.target.value }))}
                   options={[{value: 'active', label: 'Active'}, {value: 'inactive', label: 'Inactive'}]}
-                /&gt;
+                />
               </div>
-            &lt;/Card&gt;
+            </Card>
 
-            &lt;EmployeeGridList
+            <EmployeeGridList
               employees={filteredEmployees}
               viewMode={viewMode}
               onEdit={openEditEmployeeModal}
               onDelete={handleDeleteEmployee}
               onAddEmployee={() => setShowEmployeeModal(true)}
-            /&gt;
+            />
           </div>
         )
 
@@ -309,28 +309,28 @@ import React, { useState, useEffect } from 'react'
           <div className="space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0">
               <div>
-                &lt;Text variant="h1"&gt;Time Off Management&lt;/Text&gt;
-                &lt;Text variant="body" className="mt-1"&gt;{timeOffRequests.length} requests total&lt;/Text&gt;
+                <Text variant="h1">Time Off Management</Text>
+                <Text variant="body" className="mt-1">{timeOffRequests.length} requests total</Text>
               </div>
               
-              &lt;Button onClick={() => setShowTimeOffModal(true)} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} icon="Calendar"&gt;
+              <Button onClick={() => setShowTimeOffModal(true)} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} icon="Calendar">
                 Request Time Off
-              &lt;/Button&gt;
+              </Button>
             </div>
 
             {timeOffRequests.length === 0 ? (
-              &lt;Card className="text-center py-12"&gt;
-                &lt;Icon name="Calendar" className="w-16 h-16 text-surface-300 mx-auto mb-4" /&gt;
-                &lt;Text variant="h3" className="mb-2"&gt;No time off requests&lt;/Text&gt;
-                &lt;Text variant="body"&gt;Submit your first time off request&lt;/Text&gt;
-              &lt;/Card&gt;
+              <Card className="text-center py-12">
+                <Icon name="Calendar" className="w-16 h-16 text-surface-300 mx-auto mb-4" />
+                <Text variant="h3" className="mb-2">No time off requests</Text>
+                <Text variant="body">Submit your first time off request</Text>
+              </Card>
             ) : (
-              &lt;TimeOffTable 
+              <TimeOffTable 
                 requests={timeOffRequests}
                 employees={employees}
                 onApprove={handleApproveTimeOff}
                 onReject={handleApproveTimeOff}
-              /&gt;
+              />
             )}
           </div>
         )
@@ -338,11 +338,11 @@ import React, { useState, useEffect } from 'react'
         const renderOrganizationTab = () => (
           <div className="text-center py-16">
             <div className="w-24 h-24 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-6">
-              &lt;Icon name="Sitemap" className="w-12 h-12 text-white" /&gt;
+              <Icon name="Sitemap" className="w-12 h-12 text-white" />
             </div>
-            &lt;Text variant="h2" className="mb-4"&gt;Organization Chart&lt;/Text&gt;
-            &lt;Text variant="body" className="mb-8"&gt;Interactive org chart showing company hierarchy&lt;/Text&gt;
-            &lt;Card className="p-12 max-w-4xl mx-auto"&gt;
+            <Text variant="h2" className="mb-4">Organization Chart</Text>
+            <Text variant="body" className="mb-8">Interactive org chart showing company hierarchy</Text>
+            <Card className="p-12 max-w-4xl mx-auto">
               <div className="space-y-8">
                 <div className="flex justify-center">
                   <div className="bg-primary text-white px-6 py-3 rounded-lg font-semibold">CEO</div>
@@ -360,39 +360,39 @@ import React, { useState, useEffect } from 'react'
                   ))}
                 </div>
               </div>
-            &lt;/Card&gt;
+            </Card>
           </div>
         )
 
         const renderDashboardTab = () => (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            &lt;MetricCard 
+            <MetricCard 
               title="Total Employees" 
               value={employees.length} 
               iconName="Users" 
               iconBgColor="bg-primary" 
-            /&gt;
+            />
             
-            &lt;MetricCard 
+            <MetricCard 
               title="Departments" 
               value={departments.length} 
               iconName="Building2" 
               iconBgColor="bg-secondary" 
-            /&gt;
+            />
             
-            &lt;MetricCard 
+            <MetricCard 
               title="Pending Requests" 
               value={timeOffRequests.filter(req => req.status === 'pending').length} 
               iconName="Clock" 
               iconBgColor="bg-accent" 
-            /&gt;
+            />
             
-            &lt;MetricCard 
+            <MetricCard 
               title="This Month" 
               value="+12%" 
               iconName="TrendingUp" 
               iconBgColor="bg-green-500" 
-            /&gt;
+            />
           </div>
         )
 
@@ -408,8 +408,8 @@ import React, { useState, useEffect } from 'react'
           if (error) {
             return (
               <div className="text-center py-12">
-                &lt;Icon name="AlertTriangle" className="w-12 h-12 text-red-500 mx-auto mb-4" /&gt;
-                &lt;Text variant="body" className="text-red-600"&gt;{error}&lt;/Text&gt;
+                <Icon name="AlertTriangle" className="w-12 h-12 text-red-500 mx-auto mb-4" />
+                <Text variant="body" className="text-red-600">{error}</Text>
               </div>
             )
           }
@@ -422,11 +422,11 @@ import React, { useState, useEffect } from 'react'
             case 'organization':
               return renderOrganizationTab()
             case 'performance':
-              return &lt;ComingSoonCard iconName="Target" title="Performance Reviews" subtitle="Launching Q2 2024" /&gt;
+              return <ComingSoonCard iconName="Target" title="Performance Reviews" subtitle="Launching Q2 2024" />
             case 'documents':
-              return &lt;ComingSoonCard iconName="FileText" title="Document Management" subtitle="Coming Soon" /&gt;
+              return <ComingSoonCard iconName="FileText" title="Document Management" subtitle="Coming Soon" />
             case 'analytics':
-              return &lt;ComingSoonCard iconName="PieChart" title="Analytics Dashboard" subtitle="In Development" /&gt;
+              return <ComingSoonCard iconName="PieChart" title="Analytics Dashboard" subtitle="In Development" />
             case 'dashboard':
             default:
               return renderDashboardTab()
@@ -434,7 +434,7 @@ import React, { useState, useEffect } from 'react'
         }
 
         return (
-          &lt;PageLayout
+          <PageLayout
             sidebarProps={{
               navigationItems,
               quickActions,
@@ -446,11 +446,11 @@ import React, { useState, useEffect } from 'react'
             headerProps={{
               onMenuToggle: () => setSidebarCollapsed(!sidebarCollapsed),
             }}
-          &gt;
+          >
             {renderActiveTabContent()}
 
-            &lt;Modal isOpen={showEmployeeModal} onClose={() => { setShowEmployeeModal(false); resetEmployeeForm(); }} title={editingEmployee ? 'Edit Employee' : 'Add New Employee'}&gt;
-              &lt;EmployeeForm
+            <Modal isOpen={showEmployeeModal} onClose={() => { setShowEmployeeModal(false); resetEmployeeForm(); }} title={editingEmployee ? 'Edit Employee' : 'Add New Employee'}>
+              <EmployeeForm
                 newEmployee={newEmployee}
                 setNewEmployee={setNewEmployee}
                 departments={departments}
@@ -458,20 +458,20 @@ import React, { useState, useEffect } from 'react'
                 onCancel={() => { setShowEmployeeModal(false); resetEmployeeForm(); }}
                 loading={loading}
                 isEditing={!!editingEmployee}
-              /&gt;
-            &lt;/Modal&gt;
+              />
+            </Modal>
 
-            &lt;Modal isOpen={showTimeOffModal} onClose={() => setShowTimeOffModal(false)} title="Request Time Off"&gt;
-              &lt;TimeOffForm
+            <Modal isOpen={showTimeOffModal} onClose={() => setShowTimeOffModal(false)} title="Request Time Off">
+              <TimeOffForm
                 newTimeOffRequest={newTimeOffRequest}
                 setNewTimeOffRequest={setNewTimeOffRequest}
                 employees={employees}
                 onSubmit={handleSubmitTimeOff}
                 onCancel={() => setShowTimeOffModal(false)}
                 loading={loading}
-              /&gt;
-            &lt;/Modal&gt;
-          &lt;/PageLayout&gt;
+              />
+            </Modal>
+          </PageLayout>
         )
       }
 
