@@ -3,19 +3,19 @@ import React from 'react'
       import Text from '@/components/atoms/Text'
       import Icon from '@/components/atoms/Icon'
 
-      const MetricCard = ({ title, value, iconName, iconBgColor }) => {
+const MetricCard = ({ title, value, iconName, iconBgColor }) => {
         return (
-          &lt;Card className="p-6"&gt;
+          <Card className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                &lt;Text variant="small"&gt;{title}&lt;/Text&gt;
-                &lt;Text variant="h3"&gt;{value}&lt;/Text&gt;
+                <Text variant="small">{title}</Text>
+                <Text variant="h3">{value}</Text>
               </div>
               <div className={`w-12 h-12 ${iconBgColor} rounded-lg flex items-center justify-center`}>
-                &lt;Icon name={iconName} className="w-6 h-6 text-white" /&gt;
+                <Icon name={iconName} className="w-6 h-6 text-white" />
               </div>
             </div>
-          &lt;/Card&gt;
+          </Card>
         )
       }
 
