@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "employeeId": 1,
+    "type": "vacation",
+    "startDate": "2024-02-15",
+    "endDate": "2024-02-19",
+    "reason": "Family vacation to Hawaii",
+    "status": "approved",
+    "approvedBy": 3,
+    "createdAt": "2024-01-20T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "employeeId": 2,
+    "type": "sick",
+    "startDate": "2024-01-25",
+    "endDate": "2024-01-26",
+    "reason": "Flu symptoms",
+    "status": "approved",
+    "approvedBy": 4,
+    "createdAt": "2024-01-25T08:15:00Z"
+  },
+  {
+    "id": 3,
+    "employeeId": 5,
+    "type": "vacation",
+    "startDate": "2024-03-10",
+    "endDate": "2024-03-15",
+    "reason": "Spring break trip",
+    "status": "pending",
+    "approvedBy": null,
+    "createdAt": "2024-01-28T14:20:00Z"
+  },
+  {
+    "id": 4,
+    "employeeId": 6,
+    "type": "personal",
+    "startDate": "2024-02-08",
+    "endDate": "2024-02-08",
+    "reason": "Moving to new apartment",
+    "status": "approved",
+    "approvedBy": 3,
+    "createdAt": "2024-01-15T11:45:00Z"
+  },
+  {
+    "id": 5,
+    "employeeId": 9,
+    "type": "vacation",
+    "startDate": "2024-04-01",
+    "endDate": "2024-04-05",
+    "reason": "Easter holiday with family",
+    "status": "pending",
+    "approvedBy": null,
+    "createdAt": "2024-01-30T16:30:00Z"
+  },
+  {
+    "id": 6,
+    "employeeId": 10,
+    "type": "bereavement",
+    "startDate": "2024-01-22",
+    "endDate": "2024-01-24",
+    "reason": "Grandfather's funeral",
+    "status": "approved",
+    "approvedBy": 3,
+    "createdAt": "2024-01-21T09:00:00Z"
+  },
+  {
+    "id": 7,
+    "employeeId": 12,
+    "type": "vacation",
+    "startDate": "2024-05-20",
+    "endDate": "2024-05-31",
+    "reason": "Europe trip",
+    "status": "pending",
+    "approvedBy": null,
+    "createdAt": "2024-01-29T13:15:00Z"
+  },
+  {
+    "id": 8,
+    "employeeId": 13,
+    "type": "sick",
+    "startDate": "2024-01-30",
+    "endDate": "2024-01-30",
+    "reason": "Doctor appointment",
+    "status": "approved",
+    "approvedBy": 15,
+    "createdAt": "2024-01-29T07:30:00Z"
+  },
+  {
+    "id": 9,
+    "employeeId": 4,
+    "type": "vacation",
+    "startDate": "2024-06-15",
+    "endDate": "2024-06-22",
+    "reason": "Summer vacation",
+    "status": "pending",
+    "approvedBy": null,
+    "createdAt": "2024-01-31T10:00:00Z"
+  },
+  {
+    "id": 10,
+    "employeeId": 7,
+    "type": "personal",
+    "startDate": "2024-02-14",
+    "endDate": "2024-02-14",
+    "reason": "Valentine's Day",
+    "status": "approved",
+    "approvedBy": null,
+    "createdAt": "2024-01-20T15:45:00Z"
+  }
+]

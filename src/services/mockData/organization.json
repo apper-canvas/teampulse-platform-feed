@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "TeamPulse Inc.",
+    "structure": {
+      "ceo": {
+        "employeeId": null,
+        "title": "Chief Executive Officer",
+        "reports": [
+          {
+            "employeeId": 3,
+            "title": "Engineering Manager",
+            "department": "Engineering",
+            "reports": [
+              { "employeeId": 1, "title": "Senior Software Engineer" },
+              { "employeeId": 6, "title": "Frontend Developer" },
+              { "employeeId": 10, "title": "DevOps Engineer" },
+              { "employeeId": 12, "title": "Backend Developer" },
+              { "employeeId": 14, "title": "Quality Assurance Engineer" }
+            ]
+          },
+          {
+            "employeeId": 4,
+            "title": "Design Director",
+            "department": "Design",
+            "reports": [
+              { "employeeId": 2, "title": "UX Designer" }
+            ]
+          },
+          {
+            "employeeId": 8,
+            "title": "VP of Product",
+            "department": "Product",
+            "reports": [
+              { "employeeId": 5, "title": "Product Manager" }
+            ]
+          },
+          {
+            "employeeId": 7,
+            "title": "HR Manager",
+            "department": "Human Resources",
+            "reports": []
+          },
+          {
+            "employeeId": 11,
+            "title": "Marketing Manager",
+            "department": "Marketing",
+            "reports": [
+              { "employeeId": 9, "title": "Marketing Specialist" }
+            ]
+          },
+          {
+            "employeeId": 15,
+            "title": "Sales Manager",
+            "department": "Sales",
+            "reports": [
+              { "employeeId": 13, "title": "Sales Representative" }
+            ]
+          }
+        ]
+      }
+    },
+    "levels": 4
+  }
+]

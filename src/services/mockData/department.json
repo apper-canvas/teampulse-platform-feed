@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Engineering",
+    "description": "Software development and technical operations",
+    "headId": 3
+  },
+  {
+    "id": 2,
+    "name": "Design",
+    "description": "User experience and visual design",
+    "headId": 4
+  },
+  {
+    "id": 3,
+    "name": "Product",
+    "description": "Product strategy and management",
+    "headId": 8
+  },
+  {
+    "id": 4,
+    "name": "Human Resources",
+    "description": "Employee relations and organizational development",
+    "headId": 7
+  },
+  {
+    "id": 5,
+    "name": "Marketing",
+    "description": "Brand marketing and customer acquisition",
+    "headId": 11
+  },
+  {
+    "id": 6,
+    "name": "Sales",
+    "description": "Revenue generation and customer relationships",
+    "headId": 15
+  },
+  {
+    "id": 7,
+    "name": "Finance",
+    "description": "Financial planning and accounting",
+    "headId": null
+  },
+  {
+    "id": 8,
+    "name": "Operations",
+    "description": "Business operations and process optimization",
+    "headId": null
+  },
+  {
+    "id": 9,
+    "name": "Customer Success",
+    "description": "Customer support and success management",
+    "headId": null
+  },
+  {
+    "id": 10,
+    "name": "Legal",
+    "description": "Legal affairs and compliance",
+    "headId": null
+  }
+]
